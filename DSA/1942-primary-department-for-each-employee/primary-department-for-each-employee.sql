@@ -4,10 +4,5 @@ where primary_flag = 'Y'
 union
 select department_id, employee_id
 from Employee
-where employee_id in 
-    (
-        select employee_id
-        from Employee
-        group by employee_id
-        having count(*)=1
-    )
+group by employee_id
+having count(employee_id) = 1
