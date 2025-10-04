@@ -1,21 +1,15 @@
 class Solution {
-    static boolean checkPalindrome(String num){
-        int left=0;
-        int right=num.length()-1;
-        while(left<right){
-            if(num.charAt(left)!=num.charAt(right)){
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-    }
     public boolean isPalindrome(int x) {
-        if(x<0){
-            return false;
+        if(x<0) return false;
+
+        int original = x;
+        int reversed = 0;
+
+        while(x!=0){
+            int digit = x%10;
+            reversed = reversed*10 + digit;
+            x/=10;
         }
-        String num = x+"";
-        return checkPalindrome(num);
+        return reversed == original;
     }
 }
