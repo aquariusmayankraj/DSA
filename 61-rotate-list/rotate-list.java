@@ -25,9 +25,8 @@ class Solution {
         current.next = head;
 
         k = k % length;
-        int stepsofNewHead = length-k;
         ListNode newTail = head;
-        for(int i=1; i<stepsofNewHead;i++){
+        for(int i=1; i<length-k;i++){
             newTail = newTail.next;
         }
         ListNode newHead = newTail.next;
