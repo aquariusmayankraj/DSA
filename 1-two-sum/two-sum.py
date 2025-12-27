@@ -2,8 +2,9 @@ class Solution:
     def twoSum(self, nums, target):
         d={}
         for i in range(len(nums)):
-            if target - nums[i] in d:
-                return [d[target - nums[i]],i]
+            need = target-nums[i]
+            if need in d:
+                return [d[need],i]
             d[nums[i]]=i
 
         
