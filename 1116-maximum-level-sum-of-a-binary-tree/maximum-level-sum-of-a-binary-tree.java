@@ -27,10 +27,7 @@ class Solution {
                 if(n.left != null) q.add(n.left);
                 if(n.right != null) q.add(n.right);
             }
-            if(sum > maxSum) { 
-                maxSum = sum; 
-                maxLevel = level; 
-            }
+            if(sum > maxSum) { maxSum = sum; maxLevel = level; }
             level++;
         }
         return maxLevel;
