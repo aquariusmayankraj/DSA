@@ -1,7 +1,10 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        arr = [(nums[i], i) for i in range(len(nums))]   # value + index
-        arr.sort()                                      # sort by value
+        arr = []
+
+        for i in range(len(nums)):
+            arr.append((nums[i], i))
+        arr.sort()
 
         left = 0
         right = len(arr) - 1
